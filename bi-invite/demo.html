@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script>
+         $(document).ready(function() {
+            
+            $("#btnGreet").click(function() {
+               $("#greetingDiv").html('loading....');
+               $.ajax({
+                  url: "http://localhost/graphql",
+                  contentType: "application/json",
+                  type: 'POST',
+                  data: JSON.stringify({
+                     query: `{ listCategory(type: 1) { id, name, type } }`
+                  }),
+                  crossDomain: true, // Thêm option này để bật CORS
+                  xhrFields: {
+                     withCredentials: true // Thêm option này nếu bạn sử dụng cả cookies
+                  },
+                  success: function (result) {
+                     $("#greetingDiv").html("<h1>" + result.data.greeting + "</h1>");
+                  },
+                  error: function (xhr, resp, text) {
+                     console.log(xhr, resp, text);
+                     $("#greetingDivError").html(JSON.stringify(xhr) + JSON.stringify(resp) + JSON.stringify(text));
+                  }
+               });
+
+            });
+         });
+      </script>
+   </head>
+   
+   <body>
+      <h1>Test CORS </h1>
+
+      <hr/>
+      <section>
+         <button id = "btnGreet">Ấn đi</button>
+         <br/> <br/>
+         <div id = "greetingDiv"> </div>
+         <div id = "greetingDivError"> </div>
+      </section>
+      
+      <br/> <br/> <br/>
+      <hr/>
+   </body>
+</html>

@@ -1,0 +1,123 @@
+
+  
+.box-snake::before {
+  color: white !important;
+  transition: all 0.3s ease-in-out;
+}
+.box-snake.active {
+  overflow: hidden;
+}
+.box-snake.active::before  {
+  color:#ffff !important;
+}
+.box-snake.arrived::before {
+  background-color: transparent !important;
+  background-image: radial-gradient(var(--radial-gradient)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+.box-snake.active span {
+  position: absolute;
+}
+.box-snake.active span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #0c002b, #7C39CC) !important;
+  -webkit-animation: snake-animate1 2s linear infinite;
+          animation: snake-animate1 2s linear infinite;
+}
+.box-snake.active span:nth-child(2) {
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to top, #0c002b, #7C39CC) !important;
+  -webkit-animation: snake-animate2 2s linear infinite;
+          animation: snake-animate2 2s linear infinite;
+}
+.box-snake.active span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to left, #0c002b, #7C39CC) !important;
+  -webkit-animation: snake-animate3 2s linear infinite;
+          animation: snake-animate3 2s linear infinite;
+}
+.box-snake.active span:nth-child(4) {
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #0c002b, #7C39CC) !important;
+  -webkit-animation: snake-animate4 2s linear infinite;
+          animation: snake-animate4 2s linear infinite;
+}
+
+@-webkit-keyframes snake-animate1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes snake-animate1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@-webkit-keyframes snake-animate2 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes snake-animate2 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@-webkit-keyframes snake-animate3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes snake-animate3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes snake-animate4 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes snake-animate4 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
