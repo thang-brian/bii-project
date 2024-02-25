@@ -3,7 +3,7 @@
   --white: 255, 255, 255;
   --title-color: 245, 245, 245;
   --content-color: 156, 157, 159;
-  --theme-color: 59, 237, 178;
+  --theme-color: 255,39,1;
   --dark-title: 13, 18, 31;
   --Iconsax-Color: #6e7179;
   --secondary-color: 244, 137, 65;
@@ -333,18 +333,18 @@ li {
   position: absolute;
   inset: 0;
   border-radius: 8px;
-  background: linear-gradient(114.72deg, rgba(62, 255, 255, 0.5) -16.82%, rgba(58, 237, 177, 0.5) 59.74%);
+  background: linear-gradient(114.72deg, rgba(223, 32, 3, 0.5) -16.82%, rgba(205, 65, 4, 0.5) 59.74%);
   -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); /* [2] */
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   border: 1px solid;
-  border-image-source: linear-gradient(114.72deg, rgba(62, 255, 255, 0.5) -16.82%, rgba(58, 237, 177, 0.5) 59.74%);
+  border-image-source: linear-gradient(114.72deg, rgba(223, 32, 3, 0.5) -16.82%, rgba(205, 65, 4, 0.5) 59.74%);
 }
 .btn-theme:hover {
   background: rgba(var(--theme-color), 0.21);
-  -webkit-box-shadow: 0 0 17px 3px rgba(52, 208, 156, 0.34);
-          box-shadow: 0 0 17px 3px rgba(52, 208, 156, 0.34);
+  -webkit-box-shadow: 0 0 17px 3px rgba(224, 0, 0, 0.34);
+          box-shadow: 0 0 17px 3px rgba(224, 0, 0, 0.34);
 }
 
 .btn-arrow {
